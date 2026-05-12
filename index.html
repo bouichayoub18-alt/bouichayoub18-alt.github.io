@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="icon" href="header_logo.png">
+    <title>Let's Cycle Home</title>
+    <style>
+        @view-transition {
+            navigation: auto;
+        }
+        ::view-transition-old(root) {
+            animation: 0.3s ease both fade-out;
+            mix-blend-mode: plus-lighter;
+        }
+        ::view-transition-new(root) {
+            animation: 0.3s ease both fade-in;
+            mix-blend-mode: plus-lighter;
+        }
+        @keyframes fade-out {
+            from {
+                opacity: 1;
+            }
+            to { 
+                opacity: 0;
+            }
+        }
+        @keyframes fade-in {
+            from { 
+                opacity: 0; 
+            }
+            to { 
+                opacity: 1; 
+            }
+        }
+        .hm-section1{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: fit-content;
+        }
+        .hm_img{
+            width: 95%;
+        }
+        .h1-home {
+            position: absolute;
+            bottom: 0px;
+            background-color: rgba(92, 94, 19, 0.5);
+            color: white;
+            font-size: xx-large;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            width: 92%;  
+            border-right: 2px solid rgb(255, 255, 255);          
+            display: inline-block;
+            animation: blink 0.7s infinite;            
+            
+        }
+        @keyframes blink {
+            0%, 100% { border-color: transparent; }
+            50% { border-color: rgb(255, 255, 255); }
+        }
+        .hm-section2{
+            color: #050160;
+            font-size: xx-large;
+            font-family: 'Inter',sans-serif;
+            font-weight: 600;
+            text-align: center;
+            width: 98%;
+            height: auto;
+            padding: 15px;
+        }
+        #cards{
+            display: flex;
+            justify-content: space-around;
+            padding-top: 35px;
+        }
+        #cards a{
+            text-decoration: none;
+            color: black;
+            font-size: 0.6em;
+            font-weight: 100;
+
+        }
+        .card-1{
+            width: 291px;
+            height: 485px;
+            transition: transform 0.3s ease-in-out ;
+        }
+        .card-1:hover{
+            transform: scale(1.05);
+        }
+
+        .card-1 p {
+            background:linear-gradient(to right, white 50%, black 50%),#FAA608;    
+            background-size: 200% 100%, auto;
+            background-position: 100% 0, 0 0;
+            background-repeat: no-repeat;
+            -webkit-background-clip: text, padding-box;
+            background-clip: text, padding-box;
+            -webkit-text-fill-color: transparent;
+            border-radius: 0px 0px 20px 20px;
+            height: auto;
+            width: 93%;
+            text-align: center;
+            padding: 10px;   
+            margin-bottom: 0px;
+            transition: background-position 1s ease;
+        }
+        .card-1:hover p {
+            background-position: 0 0, 0 0;
+        }
+        .card-1 img{
+            width: 291px;
+            height: 395px;
+            margin-bottom: -8px;
+            border-radius: 20px 20px 0px 0px;
+        }
+        .card-2{
+            width: 291px;
+            height: 485px;
+            transition: transform 0.3s ease-in-out ;
+        }
+        .card-2:hover{
+            transform: scale(1.05);
+        }
+        .card-2 p {
+            background:linear-gradient(to right, white 50%, black 50%),#98C937;     
+            background-size: 200% 100%, auto;
+            background-position: 100% 0, 0 0;
+            background-repeat: no-repeat;
+            -webkit-background-clip: text, padding-box;
+            background-clip: text, padding-box;
+            -webkit-text-fill-color: transparent;
+            border-radius: 0px 0px 20px 20px;
+            height: auto;
+            width: 93%;
+            text-align: center;
+            padding: 10px;   
+            margin-bottom: 0px;
+            transition: background-position 1s ease;
+        }
+        .card-2:hover p {
+            background-position: 0 0, 0 0;
+        }
+        .card-2 img{
+            width: 291px;
+            height: 395px;
+            margin-bottom: -8px;
+            border-radius: 20px 20px 0px 0px;
+        }
+        .card-3{
+            width: 291px;
+            height: 485px;
+            transition: transform 0.3s ease-in-out ;
+        }
+        .card-3:hover{
+            transform: scale(1.05);
+        }
+       .card-3 p {
+            background:linear-gradient(to right, white 50%, black 50%),#5190CC;
+            background-size: 200% 100%, auto;
+            background-position: 100% 0, 0 0;
+            background-repeat: no-repeat;
+            -webkit-background-clip: text, padding-box;
+            background-clip: text, padding-box;
+            -webkit-text-fill-color: transparent;
+            border-radius: 0px 0px 20px 20px;
+            width: 93%;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 0px;
+            transition: background-position 1s ease;
+        }
+        .card-3:hover p {
+            background-position: 0 0, 0 0;
+        }
+        .card-3 img{
+            width: 291px;
+            height: 395px;
+            margin-bottom: -8px;
+            border-radius: 20px 20px 0px 0px;
+        }
+
+
+        @media screen and (max-width: 500px) {
+        .h1-home {
+            font-size: 1.2rem;
+            width: 92%;
+            padding: 10px;
+            bottom: 0px;
+        }
+
+        .h2-home {
+            font-size: 1.3rem;
+            line-height: 1.4;
+        }
+
+        #cards {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .card-1 img , .card-2 img, .card-3 img{
+            width: 100% !important;
+            height: auto !important;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+        }
+        .card-1 p, .card-2 p, .card-3 p{
+            width: 92% !important;
+            font-size: 0.9rem !important;
+            padding: 15px !important;
+        }
+        .card-1, .card-2, .card-3 {
+            width: 85%;        
+            height: auto !important;
+            margin-bottom: 20px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <div class="cursor-circle"></div>
+    <header>
+        <div  class="logo" ><a href="#ss"><img src="logo-mini-projet 1.png"></a></div>
+        <nav>
+            <div class="burger-menu" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+            <ul id="nav-list-mobile">
+                <li><a class="a_clicke" href="#ss2">HOME</a></li>
+                <li><a href="benefits.html">BENEFITS</a></li>
+                <li><a href="training.html">TRAINING</a></li>
+                <li><a href="nutrition.html">NUTRITION</a></li>
+                <li><a href="adviaces.html">ADVICES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hm-section1" id="ss">
+            <img src="Home/Aceuil-1.png" class="hm_img"> 
+            <h1 class="h1-home" id="typing-text">WELCOME TO OUR WEBSITE, “ Let’s Cycle “</h1>
+        </section>
+        <section class="hm-section2" id="ss2">
+            <h2 class="h2-home">Discover everything you need to know about Cycling,<br> training, and healthy living .</h2>
+          <div id="cards"> 
+            <div class="card-1">
+                <a href="Benefits.html">
+                <img src="Home/Img-1(Card-home).png">
+                <p>Discover the Benefits of Cycling</p>  
+                </a>    
+            </div>
+            <div class="card-2">
+                <a href="training.html">
+                <img src="Home/img card 2.png">
+                <p>Train Smarter,<br> Ride Better </p>  
+                </a>    
+            </div> 
+            <div class="card-3">
+                <a href="Nutrition.html">
+                <img src="Home/Img-3(Card-home).png">
+                <p>Discover the Best Nutrition of Cycling </p>  
+                </a>    
+            </div>  
+          </div>  
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 BOUICH AYOUB</p>
+        <p><a href="mailto:Let's Cycle@gmail.com">Let's Cycle@gmail.com</a></p>
+        <p>+97-609-754-9108</p>
+    </footer>
+    </div>
+    <script>
+        const textElement = document.getElementById("typing-text");
+    const fullText = textElement.innerHTML;
+    textElement.innerHTML = "";
+    let i = 0;
+    function typeWriter() {
+        if (i < fullText.length) {
+            if (fullText.substring(i, i + 4) === "<br>") {
+                textElement.innerHTML += "<br>";
+                i += 4;
+            } else {
+                textElement.innerHTML += fullText.charAt(i);
+                i++;
+            }
+            setTimeout(typeWriter, 100);
+        }
+    }
+    window.onload = typeWriter; 
+        const cursor = document.querySelector('.cursor-circle');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        const navLinks1 = document.querySelectorAll('nav ul li a, .logo, #cards a');
+
+        navLinks1.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                cursor.classList.add('hovered');
+            });
+            link.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hovered');
+            });
+        });
+
+
+
+        const burgerBtn = document.getElementById('mobile-menu');
+const mobileNav = document.getElementById('nav-list-mobile');
+
+if (burgerBtn && mobileNav) {
+    burgerBtn.addEventListener('click', () => {
+        // Kan-zidou wlla n-haydou l-class li kat-bayen l-menu
+        mobileNav.classList.toggle('mobile-active');
+        
+        // Animation dyal l-Burger l-X
+        burgerBtn.classList.toggle('toggle-burger');
+    });
+}
+document.querySelectorAll('#nav-list-mobile li a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileNav.classList.remove('mobile-active');
+        burgerBtn.classList.remove('toggle-burger');
+    });
+});
+document.addEventListener('click', (event) => {
+    const isClickInsideMenu = mobileNav.contains(event.target);
+    const isClickOnBurger = burgerBtn.contains(event.target);
+
+    if (!isClickInsideMenu && !isClickOnBurger && mobileNav.classList.contains('mobile-active')) {
+        mobileNav.classList.remove('mobile-active');
+        burgerBtn.classList.remove('toggle-burger');
+    }
+});
+    </script>
+</body>
+</html>

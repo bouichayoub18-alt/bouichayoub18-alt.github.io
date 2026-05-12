@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="icon" href="header_logo.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Let's Cycle Training</title>
+    <style>
+    @view-transition {
+            navigation: auto;
+        }
+        ::view-transition-old(root) {
+            animation: 0.3s ease both fade-out;
+            mix-blend-mode: plus-lighter;
+        }
+        ::view-transition-new(root) {
+            animation: 0.3s ease both fade-in;
+            mix-blend-mode: plus-lighter;
+        }
+        @keyframes fade-out {
+            from {
+                opacity: 1;
+            }
+            to { 
+                opacity: 0;
+            }
+        }
+        @keyframes fade-in {
+            from { 
+                opacity: 0; 
+            }
+            to { 
+                opacity: 1; 
+            }
+        }        
+    .section-1 img{
+      width: 95%;
+      height: 100%;
+      margin: 0 auto;
+      display: block;
+    }
+    .section-1 .dv1{
+      position: absolute;
+      top: 190px;
+      left: 425px;
+      text-align: center;
+    }
+    .dv1{
+      line-height: 2.3;
+    }
+    .dv1 .c_t{
+      color: #2e29bd;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+    .dv1 h1{
+      color: white;
+      font-size: 2.9em;
+      padding-bottom: 2px;      
+      display: inline-block;
+      border-right: 1px solid rgb(250, 248, 248);
+      animation: blink 0.7s infinite;
+    }
+    @keyframes blink {
+            0%, 100% { border-color: transparent; }
+            50% { border-color: rgb(250, 247, 247); }
+        }
+    .dv1 p{
+      color: white;
+      font-size: 1.3em;
+      line-height: 1.1;
+    }
+    .section-2{
+      padding-top: 25px;
+    }
+    .section-2 h2{
+      color: #050160;
+      font-size: 1.8em;
+      padding-left: 45px;
+      padding-bottom: 20px;
+
+    }
+    table {
+      margin: 0 auto;
+      width: 95%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 24px 41px;
+      font-family: "Arial-Bold", sans-serif;
+    }
+    .tr-1, .tr-12 {
+      background: #1b1b19;
+      color: #ffffff;
+    }
+    .tr-1 th, .tr-12 th {
+      font-size: 23px;
+      font-weight: 700;
+    }
+    .tr-2, .tr-3, .tr-4, .tr-22, .tr-32, .tr-42, .tr-5, .tr-6, .tr-7, .tr-8 {
+      background: #40403e;
+      color: #ffffff;
+      border-bottom: 1px solid #555;
+    }
+    td {
+      font-size: 20px;
+    }
+    .table-1, .table-2 {
+      border-radius: 13px;
+      overflow: hidden;
+    }
+    .section-2 .key_wrd{
+      display: flex;
+      gap: 20px;
+      padding-left: 45px;
+      align-items: center;
+      font-size: 1.9em;
+      color: red;
+      padding-top: 10px;
+    }
+    .container{
+      display: flex;      
+      width: 88%;
+      margin: 0 auto;
+    }
+    .container .d_4{
+      color: #050160;
+      font-size: 1.5em;
+      margin: 15px 0;
+      line-height: 2.5;
+    }
+    .container .p_s2{
+      font-size: 1.4em;
+      line-height: 2.8;
+      padding-left: 20px;
+      margin: 15px 0;
+    }
+
+    /* --- Media Query for Training Page (Mobile) --- */
+@media screen and (max-width: 500px) {
+
+    .section-1 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-1 img {
+        width: 100% !important;
+        height: auto !important;
+        display: block;
+    }
+    .section-1 .dv1 {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%);
+        width: 90% !important; 
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        background: transparent !important;
+    }
+    .dv1 h1 {
+        font-size: 1.8em !important;
+    }
+
+    .dv1 p {
+        font-size: 1rem !important;
+    }
+    .section-2 h2 {
+        font-size: 1.4em !important;
+        padding-left: 15px;
+    }
+    .table-1, .table-2 {
+        display: table !important;
+        width: 100% !important;
+        margin: 10px 0 !important;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-bottom: 30px;
+        table-layout: fixed;
+    }
+    th, td {
+        padding: 10px 5px !important;
+        font-size: 10px !important;
+        word-wrap: break-word;
+    }
+    .section-2 .key_wrd {
+        padding-left: 20px;
+        font-size: 1.3em !important;
+    }
+    .container {
+      display: flex;
+      width: 90%;
+      margin: 0 auto;
+
+    }
+    .container h4{
+        color: #050160;
+        margin-top: 15px;
+        font-size: 0.9em;
+        line-height: 5.4;
+    }
+    .container .d_4, .container .p_s2 {
+      width: 100% !important;
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        
+    }
+    .container .p_s2 p {
+        font-size: 0.95em !important;
+        line-height: 1.4 !important;
+        padding-left: 15px !important;
+        border-left: 2px solid #2e29bd;
+        margin-bottom: 10px !important;
+    }
+}
+    </style>
+</head>
+<body>
+    <div id="page">
+      <div class="cursor-circle"></div>
+       <header>
+        <div  class="logo" ><a href="index.html"><img src="logo-mini-projet 1.png"></a></div>
+        <nav>
+          <div class="burger-menu" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+            <ul id="nav-list-mobile">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="benefits.html">BENEFITS</a></li>
+                <li><a href="#ss2"  class="a_clicke">TRAINING</a></li>
+                <li><a href="nutrition.html">NUTRITION</a></li>
+                <li><a href="advices.html">ADVICES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+      <section class="section-1" id="ss2">
+        <img src="Training/section_1.png">
+        <div class="dv1">
+          <div class="c_t">Cycling Training</div>
+          <h1 id="typing-text">Cycling Training Plan</h1>    
+          <p> Everything you need to know about cycling training for<br> beginners, intermediates, advanced. </p>
+        </div>
+    
+  </section>
+
+  <section class="section-2">
+  <h2>Cycling Training Overview </h2>
+  
+  <table class="table-1">
+    <thead>
+      <tr class="tr-1">
+        <th>Level</th>
+        <th>Goal</th>
+        <th>Days/WK</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="tr-2">
+        <td>Beginner</td>
+        <td>Base Fitness</td>
+        <td>3</td>
+      </tr>
+      <tr class="tr-3">
+        <td>Intermediate</td>
+        <td>Power & Speed</td>
+        <td>4--5</td>
+      </tr>
+      <tr class="tr-4">
+        <td>Advanced</td>
+        <td>Peak Performance</td>
+        <td>5--6</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Weekly Plan</h2>
+
+  <table class="table-2">
+    <thead>
+      <tr class="tr-12">
+        <th>Day</th>
+        <th>Beginner</th>
+        <th>Intermediate</th>
+        <th>Advanced</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="tr-22">
+        <td>Mon</td>
+        <td>Rest</td>
+        <td>Rest</td>
+        <td>Recovery Spin</td>
+      </tr>
+      <tr class="tr-32">
+        <td>Tue</td>
+        <td>45min Easy</td>
+        <td>60min</td>
+        <td>90min VO2 Max</td>
+      </tr>
+      <tr class="tr-42">
+        <td>Wed</td>
+        <td>Rest</td>
+        <td>60min Easy</td>
+        <td>2h Endurance</td>
+      </tr>
+      <tr class="tr-5">
+        <td>Thu</td>
+        <td>45min Constant</td>
+        <td>75min Strength</td>
+        <td>90min Sprints</td>
+      </tr>
+      <tr class="tr-6">
+        <td>Fri</td>
+        <td>Rest</td>
+        <td>Rest</td>
+        <td>60min Easy</td>
+      </tr>
+      <tr class="tr-7">
+        <td>Sat</td>
+        <td>90min Long</td>
+        <td>2.5h Long</td>
+        <td>4h+ Long</td>
+      </tr>
+      <tr class="tr-8">
+        <td>Sun</td>
+        <td>Rest</td>
+        <td>90min Steady</td>
+        <td>2h Endurance</td>
+      </tr>
+    </tbody>
+    </table>
+    <div class="key_wrd">
+      <img src="Training/Group.png">
+      <h3>Key words</h3>
+    </div>
+    <div class="container">
+      <div class="d_4">
+        <h4>Recovery Spin : </h4>
+        <h4>Endurance (Zone 2) : </h4>
+        <h4>VO2 Max : </h4>
+      </div>        
+      <div class="p_s2">
+        <p>A very Short, very light ride ( usually 30-60 minutes ) .</p>
+        <p>A constant, moderate ride that you can keep up for a long time (1 to 5 hours ) .</p>
+        <p>A very high-intensity effort that lasts between 3 to 8 minutes .</p>
+      </div>        
+    </div>
+    </section>
+    </main>
+    <footer class="footer">
+            <p>© 2026 BOUICH AYOUB</p>
+            <p><a href="mailto:Let's Cycle@gmail.com">Let's Cycle@gmail.com</a></p>
+            <p>+97-609-754-9108</p>
+        </footer>
+    </div>  
+<script>
+  const textElement = document.getElementById("typing-text");
+    const fullText = textElement.innerHTML;
+    textElement.innerHTML = "";
+    let i = 0;
+    function typeWriter() {
+        if (i < fullText.length) {
+            if (fullText.substring(i, i + 4) === "<br>") {
+                textElement.innerHTML += "<br>";
+                i += 4;
+            } else {
+                textElement.innerHTML += fullText.charAt(i);
+                i++;
+            }
+            setTimeout(typeWriter, 100);
+        }
+    }
+    window.onload = typeWriter; 
+  const cursor = document.querySelector('.cursor-circle');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        const navLinks = document.querySelectorAll('nav ul li a, .logo, #cards a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                cursor.classList.add('hovered');
+            });
+            link.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hovered');
+            });
+        });
+
+// for media query
+
+        const burgerBtn = document.getElementById('mobile-menu');
+const mobileNav = document.getElementById('nav-list-mobile');
+
+if (burgerBtn && mobileNav) {
+    burgerBtn.addEventListener('click', () => {
+        // Kan-zidou wlla n-haydou l-class li kat-bayen l-menu
+        mobileNav.classList.toggle('mobile-active');
+        
+        // Animation dyal l-Burger l-X
+        burgerBtn.classList.toggle('toggle-burger');
+    });
+}
+document.querySelectorAll('#nav-list-mobile li a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileNav.classList.remove('mobile-active');
+        burgerBtn.classList.remove('toggle-burger');
+    });
+});
+document.addEventListener('click', (event) => {
+    const isClickInsideMenu = mobileNav.contains(event.target);
+    const isClickOnBurger = burgerBtn.contains(event.target);
+
+    if (!isClickInsideMenu && !isClickOnBurger && mobileNav.classList.contains('mobile-active')) {
+        mobileNav.classList.remove('mobile-active');
+        burgerBtn.classList.remove('toggle-burger');
+    }
+});
+</script>
+
+</body>
+</html>

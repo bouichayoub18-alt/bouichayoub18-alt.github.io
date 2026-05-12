@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Cycle Nutrition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="icon" href="header_logo.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @view-transition {
+            navigation: auto;
+        }
+        ::view-transition-old(root) {
+            animation: 0.3s ease both fade-out;
+            mix-blend-mode: plus-lighter;
+        }
+        ::view-transition-new(root) {
+            animation: 0.3s ease both fade-in;
+            mix-blend-mode: plus-lighter;
+        }
+        @keyframes fade-out {
+            from {
+                opacity: 1;
+            }
+            to { 
+                opacity: 0;
+            }
+        }
+        @keyframes fade-in {
+            from { 
+                opacity: 0; 
+            }
+            to { 
+                opacity: 1; 
+            }
+        }
+        .titre_1{
+            line-height: 1.9;
+        }
+        .titre_1 h1{
+            font-size: 2.3em;
+            color: #0800FB;
+            text-align: center;
+        }
+        .titre_1 p{
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: 100;
+            line-height: 1;
+        }
+        .section-1 {
+            background-image: url(Nutrition/wp12501451-cycling-4k-wallpapers\ 1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 95%;
+            margin: 20px auto;
+            height: 441px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .content {
+            width: 90%;
+            text-align: center;
+        }
+        .section-1 h2 {
+            color: #FAA608;
+            font-size: 2.7em;
+            margin-bottom: 35px;
+        }
+        .info {
+            display: flex;
+            gap: 30px; 
+            text-align: left;
+        }
+        .s1_h4 h4 {
+            font-size: 1.9em;
+            color: #5190CC;
+            margin: 25px 0;
+            line-height: 1.5;
+        }
+        .s1_p p {
+            font-size: 1.4em;
+            margin: 25px 0;
+            line-height: 2.1;
+        }
+        .section-2 {
+            background: url(Nutrition/pexels-pixabay-533339\ 1.png);
+            padding: 50px;
+            background-repeat: no-repeat;
+            background-size: cover;   
+            background-position: center; 
+            border-radius: 20px;
+            width: 95%;        
+            margin: 20px auto; 
+            color: white;
+            box-sizing: border-box;
+        }
+        .s2_h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+        .title {
+            color: #FAA608;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+        .group ul {
+            padding-left: 30px; 
+        }
+        .group li {
+            font-size: 1.3em;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        .blue-text {
+            color: #5190CC;
+            display: inline-block;
+            min-width: 170px; 
+        }
+        @media screen and (max-width: 500px) {
+            .titre_1 h1 {
+                font-size: 1.8em;
+            }
+            .titre_1 p {
+                font-size: 1.1em;
+                padding: 0 10px;
+            }
+
+            .section-1 {
+                height: auto;
+                padding: 30px 10px;
+                width: 95%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .section-1 h2 {
+                font-size: 1.8em;
+                margin-bottom: 20px;
+            }
+            .info {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 10px;
+                text-align: left;
+                width: 100%;
+            }
+            .s1_h4 h4 {
+                font-size: 0.9em;
+                width: 120%;
+            }
+            .s1_p p {
+                font-size: 0.7em;
+                line-height: 2;
+            }
+
+            .section-2 {
+                padding: 20px;
+            }
+            .s2_h2 {
+                font-size: 1.8em;
+            }
+            .title {
+                font-size: 1.2em;
+            }
+            .group li {
+                font-size: 0.8em;
+            }
+            .blue-text {
+                display: block;
+                min-width: auto;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <div class="cursor-circle"></div>
+        <header>
+        <div  class="logo" ><a href="index.html"><img src="logo-mini-projet 1.png"></a></div>
+        <nav>
+            <div class="burger-menu" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+            <ul id="nav-list-mobile">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="benefits.html">BENEFITS</a></li>
+                <li><a href="training.html" >TRAINING</a></li>
+                <li><a href="#ss2" class="a_clicke">NUTRITION</a></li>
+                <li><a href="advices.html">ADVICES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="titre_1">
+        <h1>Cycling Nutrition</h1>
+        <p>
+            Good nutrition helps cyclists perform better<br> and recover faster.
+        </p>
+    </div>
+    <main>
+        <section class="section-1" id="ss2">
+            <div class="content">
+                <h2>Nutritional Advice :</h2>        
+                <div class="info">
+                    <div class="s1_h4">
+                        <h4>Fuel :</h4>
+                        <h4>Repair :</h4>
+                        <h4>Timing :</h4>
+                        <h4>Balance :</h4>
+                    </div>
+                    <div class="s1_p">
+                        <p>Eat carbohydrates ( rice,pasta,..) to power your legs.</p>
+                        <p>Eat protein (chiken,eggs,..) to fix your muscles after riding.</p>
+                        <p>Eat your recovery meal during the first 30-60 minutes after finiching.</p>
+                        <p>Eat more on “Hard” days and less on “Rest” days.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-2">
+    <h2 class="s2_h2">Meal Examples :</h2>
+
+    <div class="group">
+        <h3 class="title">Before Training (2-3 Hours Before)</h3>
+        <ul>
+            <li><b class="blue-text">Rice Pudding :</b> With a few nuts or cinnamon for energy.</li>
+            <li><b class="blue-text">Eggs :</b> Boiled or cooked eggs on whole-wheat toast.</li>
+            <li><b class="blue-text">Fruit :</b> A banana with a bit of peanut butter.</li>
+        </ul>
+    </div>
+
+    <div class="group">
+        <h3 class="title">After Training (Recovery)</h3>
+        <ul>
+            <li><b class="blue-text">Protein + Carb :</b> Grilled chicken with brown rice and vegetables.</li>
+            <li><b class="blue-text">Carbohydrates :</b> Rice, potatoes, or pasta with lean meat sauce or tuna.</li>
+            <li><b class="blue-text">Snacks :</b> Greek yogurt, milk, or a recovery shake ( Chocolate Milk, ...).</li>
+        </ul>
+    </div>
+    </section>
+    </main>
+        <footer class="footer">
+            <p>© 2026 BOUICH AYOUB</p>
+            <p>Let's Cycle@gmail.com</p>
+            <p>+97-609-754-9108</p>
+        </footer>
+    </div>
+    <script>
+  const cursor = document.querySelector('.cursor-circle');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        const navLinks = document.querySelectorAll('nav ul li a, .logo, #cards a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                cursor.classList.add('hovered');
+            });
+            link.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hovered');
+            });
+        });
+
+
+
+        const burgerBtn = document.getElementById('mobile-menu');
+const mobileNav = document.getElementById('nav-list-mobile');
+
+if (burgerBtn && mobileNav) {
+    burgerBtn.addEventListener('click', () => {
+        // Kan-zidou wlla n-haydou l-class li kat-bayen l-menu
+        mobileNav.classList.toggle('mobile-active');
+        
+        // Animation dyal l-Burger l-X
+        burgerBtn.classList.toggle('toggle-burger');
+    });
+}
+document.querySelectorAll('#nav-list-mobile li a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileNav.classList.remove('mobile-active');
+        burgerBtn.classList.remove('toggle-burger');
+    });
+});
+document.addEventListener('click', (event) => {
+    const isClickInsideMenu = mobileNav.contains(event.target);
+    const isClickOnBurger = burgerBtn.contains(event.target);
+
+    if (!isClickInsideMenu && !isClickOnBurger && mobileNav.classList.contains('mobile-active')) {
+        mobileNav.classList.remove('mobile-active');
+        burgerBtn.classList.remove('toggle-burger');
+    }
+});
+</script>
+</body>
+</html>

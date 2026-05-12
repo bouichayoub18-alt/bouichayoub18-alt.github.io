@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="icon" href="header_logo.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Let's Cycle Advices</title>
+    <script>
+        function btnf(event) {
+            if(event) event.preventDefault(); 
+            
+            alert("Thank you for the message");
+            window.location.href = "index.html";
+        }
+    </script>
+    <style>
+        @view-transition {
+            navigation: auto;
+        }
+        ::view-transition-old(root) {
+            animation: 0.3s ease both fade-out;
+            mix-blend-mode: plus-lighter;
+        }
+        ::view-transition-new(root) {
+            animation: 0.3s ease both fade-in;
+            mix-blend-mode: plus-lighter;
+        }
+        @keyframes fade-out {
+            from {
+                opacity: 1;
+            }
+            to { 
+                opacity: 0;
+            }
+        }
+        @keyframes fade-in {
+            from { 
+                opacity: 0; 
+            }
+            to { 
+                opacity: 1; 
+            }
+        }
+        .section-1{
+            background-image: url(Contact/Group\ 1.png);
+            background-repeat: no-repeat;
+            width: 95%;
+            height: 510px;
+            margin: 0 auto;
+            background-position: center;
+            background-size: cover;
+            border-radius: 40px 0 0 0 ;
+            margin-top: 50px;
+        }
+        .section-1 h1 {
+            font-size: 3.5em;
+            text-align: right;
+            width: 86%;
+            border-right: 2px solid black;
+            padding-right: 5px;
+            display: inline-block;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { border-color: transparent; }
+            50% { border-color: black; }
+        }
+        .section-2{
+            background-image: url(Contact/Section_2.png);
+            width: 95%;
+            height: auto;
+            margin: 0 auto;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .section-2 h2{
+            color: #3E3F3C;
+            font-size: 3.4em;
+            padding-top: 165px;
+            padding-left: 70px;
+            padding-bottom: 35px;
+        }
+        input{
+            display: block;
+            background-color: #70706E;
+            margin: 70px 25px auto;
+            width: 95%;
+            height: 50px;
+            border: 1px solid #70706E;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        ::placeholder{
+            color: rgba(255, 255, 255, 0.226);
+            font-size: 1.5em;
+        }
+        input:focus{
+            color: white;
+        }
+        textarea{
+            display: block;
+            background-color: #70706E;
+            margin: 70px 25px auto;
+            width: 95%;
+            border: 1px solid #70706E;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        textarea:focus{
+            color: rgb(255, 255, 255);
+        }
+        input, textarea {
+            transition: all 0.3s ease;
+        }
+        input:hover, textarea:hover {
+            border: 1px solid #817DFF;
+            box-shadow: 0 0 10px rgba(129, 125, 255, 0.3); 
+            transform: translateY(-2px);
+        }
+        input:focus, textarea:focus {
+            border: 1px solid #817DFF;
+            outline: none;
+            box-shadow: 0 0 15px rgba(129, 125, 255, 0.5);
+        }
+        .section-2 #btn {
+            background-color: #817DFF;
+            color: #030151;
+            padding: 0 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+            border-radius: 40px;
+            margin-top: 105px;
+            margin-left: 20px;
+            margin-bottom: 90px;
+            border: #817DFF 1px solid;
+            height: 60px;
+            width: 18%;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+    .section-2 #btn::after {
+        content: "🚴"; 
+        position: absolute;
+        left: -40px;
+        font-size: 1.5rem;
+        transition: all 0.4s ease;
+    }
+    .section-2 #btn:hover {
+        background-color: #030151;
+        color: #817DFF;
+        padding-left: 50px; 
+        box-shadow: 0 10px 20px rgba(129, 125, 255, 0.3);
+        transform: translateY(-5px);
+    }
+    .section-2 #btn:hover::after {
+        left: 20px;
+    }
+    .section-2 #btn:active {
+        transform: scale(0.95);
+    }
+    @media screen and (max-width: 500px) {
+    .section-1 {
+        height: 350px;
+        margin-top: 20px;
+    }
+
+    .section-1 h1 {
+        font-size: 1.8em;
+        width: 43%;
+        text-align: center;
+        border-right: none;
+        display: block;
+        margin: 0 auto;
+        padding-top: 30px;
+        padding-left: 180px;
+
+    }
+    .section-2 h2 {
+        font-size: 1.8em;
+        padding-left: 20px;
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    form {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    input, textarea {
+        width: 100% !important;
+        margin: 20px 0 !important;
+        box-sizing: border-box;
+    }
+    .section-2 #btn {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+
+    .section-2 #btn::after {
+        content: "🚴"; 
+        display: inline-block !important;
+        position: absolute;
+        left: -40px;
+        transition: all 0.4s ease;
+    }
+
+    .section-2 #btn:hover::after {
+        left: 20px;
+    }
+
+    .section-2 #btn:hover {
+        padding-left: 40px !important;
+    }
+}
+    </style>
+</head>
+<body>
+    <div id="page">
+        <div class="cursor-circle"></div>
+    <header>
+        <div  class="logo" ><a href="index.html"><img src="logo-mini-projet 1.png"></a></div>
+        <nav>
+            <div class="burger-menu" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+            <ul id="nav-list-mobile">
+                <li><a  href="index.html">HOME</a></li>
+                <li><a href="benefits.html">BENEFITS</a></li>
+                <li><a href="training.html">TRAINING</a></li>
+                <li><a href="nutrition.html">NUTRITION</a></li>
+                <li><a href="advices.html" >ADVICES</a></li>
+                <li><a href="#ss2"  class="a_clicke">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section-1">
+            <h1 id="typing-text">We're Here To <br> Help You Start </h1>
+        </section>
+        <section class="section-2">
+            <h2>Just hit us up and <br> keep going.</h2>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="number" placeholder="Phone Number ">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Write Your Message" cols="50" rows="20"></textarea>
+                <button id="btn" >SEND MESSAGE</button>
+            </form>
+        </section>
+    </main>        
+    <footer class="footer">
+            <p>© 2026 BOUICH AYOUB</p>
+            <p><a href="mailto:Let's Cycle@gmail.com">Let's Cycle@gmail.com</a></p>
+            <p>+97-609-754-9108</p>
+        </footer>
+    </div>
+    <script>
+    const textElement = document.getElementById("typing-text");
+    const fullText = textElement.innerHTML;
+    textElement.innerHTML = "";
+    let i = 0;
+    function typeWriter() {
+        if (i < fullText.length) {
+            if (fullText.substring(i, i + 4) === "<br>") {
+                textElement.innerHTML += "<br>";
+                i += 4;
+            } else {
+                textElement.innerHTML += fullText.charAt(i);
+                i++;
+            }
+            setTimeout(typeWriter, 100);
+        }
+    }
+    window.onload = typeWriter; 
+
+       const button=document.getElementById('btn');
+        button.addEventListener("click", btnf);
+        
+        const cursor = document.querySelector('.cursor-circle');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        const navLinks = document.querySelectorAll('nav ul li a, .logo, #cards a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                cursor.classList.add('hovered');
+            });
+            link.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hovered');
+            });
+        });
+
+
+
+
+        const burgerBtn = document.getElementById('mobile-menu');
+const mobileNav = document.getElementById('nav-list-mobile');
+
+if (burgerBtn && mobileNav) {
+    burgerBtn.addEventListener('click', () => {
+        // Kan-zidou wlla n-haydou l-class li kat-bayen l-menu
+        mobileNav.classList.toggle('mobile-active');
+        
+        // Animation dyal l-Burger l-X
+        burgerBtn.classList.toggle('toggle-burger');
+    });
+}
+document.querySelectorAll('#nav-list-mobile li a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileNav.classList.remove('mobile-active');
+        burgerBtn.classList.remove('toggle-burger');
+    });
+});
+document.addEventListener('click', (event) => {
+    const isClickInsideMenu = mobileNav.contains(event.target);
+    const isClickOnBurger = burgerBtn.contains(event.target);
+
+    if (!isClickInsideMenu && !isClickOnBurger && mobileNav.classList.contains('mobile-active')) {
+        mobileNav.classList.remove('mobile-active');
+        burgerBtn.classList.remove('toggle-burger');
+    }
+});
+    </script>
+</body>
+</html>
